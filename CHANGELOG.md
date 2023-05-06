@@ -4,6 +4,12 @@ All notable changes to the "assert" will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.2] - 2023-05-07
+
+### Fixed
+
+- Removed some unnecessary code (no effect on functionality).
+
 ## [0.0.1] - 2023-05-07
 
 ### Added
