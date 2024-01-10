@@ -4,6 +4,12 @@ All notable changes to the "assert" will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.5] - 2024-01-10
+
+### Fixed
+
+- Fix some `package.json` errors.
+
 ## [0.0.4] - 2024-01-10
 
 ### Added

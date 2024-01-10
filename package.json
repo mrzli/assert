@@ -1,10 +1,11 @@
 {
   "name": "@gmjs/assert",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Assert utils.",
   "author": {
     "name": "Goran Mržljak",
-    "email": "goran.mrzljak@gmail.com"
+    "email": "goran.mrzljak@gmail.com",
+    "url": "https://mrzli.com"
   },
   "license": "MIT",
   "keywords": [],
@@ -13,10 +14,7 @@
     "url": "https://github.com/mrzli/assert"
   },
   "homepage": "https://github.com/mrzli/assert",
-  "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "main": "src/index.js",
   "scripts": {
     "start:dev": "ts-node src/index.ts",
     "lint": "eslint --report-unused-disable-directives --fix . && prettier --write .",
