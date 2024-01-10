@@ -4,6 +4,12 @@ All notable changes to the "assert" will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.4] - 2024-01-10
+
+### Added
+
+- Add `ensureNotUndefined`, `ensureNotNull`, `ensureNotNullish` functions.
+
 ## [0.0.3] - 2024-01-10
 
 ### Changed
