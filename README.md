@@ -21,6 +21,66 @@ invariant(x !== undefined, 'x must be defined');
 
 ## API
 
+#### `ensureNever`
+
+Used for compile time check to make sure that the value provided to the function is of type `never`.
+
+This can be used to make sure, at compile time, that all cases for a type are handled.
+
+If you have the following:
+
+```ts
+type Operation = 'add' | 'subtract';
+
+function compute(operation: Operation, op1: number, op2: number): number {
+  switch (operation) {
+    case 'add': {
+      return op1 + op2;
+    }
+    case 'subtract': {
+      return op1 - op2;
+    }
+    default: {
+      return ensureNever(operation);
+    }
+  }
+}
+```
+
+And then you decide to change `Operation`:
+
+```ts
+type Operation = 'add' | 'subtract' | 'multiply' | 'divide';
+```
+
+`compute` function will now complain at compile time until you add cases handling the new `'multiply'` and `'divide'` options, and so exhaustive handling will be ensured at compile time.
+
+After we add the new cases, everything works again:
+
+```ts
+type Operation = 'add' | 'subtract' | 'multiply' | 'divide';
+
+function compute(operation: Operation, op1: number, op2: number): number {
+  switch (operation) {
+    case 'add': {
+      return op1 + op2;
+    }
+    case 'subtract': {
+      return op1 - op2;
+    }
+    case 'multiply': {
+      return op1 * op2;
+    }
+    case 'divide': {
+      return op1 / op2;
+    }
+    default: {
+      return ensureNever(operation);
+    }
+  }
+}
+```
+
 #### `ensureNotNull`
 
 Throws an error if the given value is `null`, otherwise returns the given value, with the type narrowed to exclude `null`.

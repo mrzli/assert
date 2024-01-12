@@ -4,6 +4,12 @@ All notable changes to the "assert" will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.6] - 2024-01-12
+
+### Added
+
+- Add `ensureNever` function.
+
 ## [0.0.5] - 2024-01-10
 
 ### Fixed

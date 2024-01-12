@@ -30,3 +30,7 @@ export function ensureNotNullish<T>(value: T | null | undefined): T {
   );
   return value;
 }
+
+export function ensureNever(value: never): never {
+  return value;
+}
